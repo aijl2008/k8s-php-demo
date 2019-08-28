@@ -1,1 +1,2 @@
-vendor
+Jenkinsfile
+k8s-deployment.yaml
