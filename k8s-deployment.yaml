@@ -1,24 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {APP_NAME}-deployment
+  name: phpinfo
   labels:
-    app: {APP_NAME}
+    app: phpinfo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {APP_NAME}
+      app: phpinfo
   template:
     metadata:
       labels:
-        app: {APP_NAME}
+        app: phpinfo
     spec:
       containers:
-      - name: {APP_NAME}
-        image: {IMAGE_URL}:{IMAGE_TAG}
+      - name: phpinfo
+        image: aijl2008/centos-nginx-php:7.1.30:<BUILD_TAG>
         ports:
-        - containerPort: 40080
-        env:
-          - name: SPRING_PROFILES_ACTIVE
-            value: {SPRING_PROFILE}
+        - containerPort: 80
