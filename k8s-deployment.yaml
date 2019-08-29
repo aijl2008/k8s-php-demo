@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: phpinfo
-        image: aijl2008/centos-nginx-php:7.1.30:<BUILD_TAG>
+        image: docker.artron.net/phpinfo:<BUILD_TAG>
         ports:
         - containerPort: 80
